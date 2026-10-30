@@ -32,13 +32,7 @@ const PricingAndCabinet = () => {
                 alt="Cabinet de sexothérapie de Romane de Fresnoye à Lille"
                 className="w-full h-full object-cover object-center transform group-hover:scale-103 transition-transform duration-700 ease-out"
               />
-              <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md px-4 py-3 rounded-xl border border-line flex items-center justify-between text-xs text-ink-900 shadow-soft">
-                <span className="font-display font-bold flex items-center gap-1.5">
-                  <Sparkles size={14} className="text-terracotta-500" />
-                  Cabinet Romane de Fresnoye
-                </span>
-                <span className="text-ink-300 font-medium">55 rue Jeanne d'Arc, Lille</span>
-              </div>
+              
             </div>
           </div>
 
