@@ -1,11 +1,42 @@
-import React from 'react';
-import { MapPin, Clock, Train, Video, ExternalLink, Calendar, Sparkles } from 'lucide-react';
-import studioImg from '../assets/Studio.jpeg';
+import React, { useState, useEffect } from 'react';
+import { MapPin, Clock, Train, Video, ExternalLink, Calendar } from 'lucide-react';
+import studioMainImg from '../assets/Studio.jpeg';
+import studio1Img from '../assets/studio 1.jpeg';
+import studio2Img from '../assets/studio 2.jpeg';
 
 const RESALIB_URL =
   'https://www.resalib.fr/praticien/138450-romane-de-fresnoye-sexotherapeute-lille';
 
+const studioPhotos = [
+  {
+    src: studioMainImg,
+    alt: "Espace d'accueil et consultation du cabinet de Romane de Fresnoye à Lille",
+    caption: 'Espace de consultation',
+  },
+  {
+    src: studio1Img,
+    alt: "Vue intérieure du cabinet de sexothérapie à Lille",
+    caption: 'Cadre chaleureux et serein',
+  },
+  {
+    src: studio2Img,
+    alt: "Coin écoute confidentielle et thérapie de couple à Lille",
+    caption: 'Espace d’échange et d’écoute',
+  },
+];
+
 const PricingAndCabinet = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  // Scorrimento continuo automatico ogni 3.5 secondi senza necessità di alcun click
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % studioPhotos.length);
+    }, 3500);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section id="cabinet" className="py-24 md:py-32 px-6 bg-sand-50">
       <div className="max-w-7xl mx-auto space-y-20">
@@ -22,17 +53,46 @@ const PricingAndCabinet = () => {
           </p>
         </div>
 
-        {/* Studio Showcase: Foto dello Studio con Dettagli */}
+        {/* Studio Showcase: Foto a scorrimento automatico con Dettagli */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center bg-clay-50/80 p-6 sm:p-10 md:p-12 rounded-[var(--radius-card)] border border-line shadow-soft">
-          {/* Foto dello studio */}
+          {/* Riquadro Foto che girano da sole */}
           <div className="lg:col-span-7">
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lift border-4 border-white group">
-              <img
-                src={studioImg}
-                alt="Cabinet de sexothérapie de Romane de Fresnoye à Lille"
-                className="w-full h-full object-cover object-center transform group-hover:scale-103 transition-transform duration-700 ease-out"
-              />
-              
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lift border-4 border-white select-none pointer-events-none">
+              {studioPhotos.map((photo, index) => (
+                <div
+                  key={index}
+                  className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+                    index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'
+                  }`}
+                >
+                  <img
+                    src={photo.src}
+                    alt={photo.alt}
+                    className="w-full h-full object-cover object-center transform scale-100 hover:scale-105 transition-transform duration-1000 ease-out"
+                  />
+                  {/* Gradiente inferiore decorativo */}
+                  <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-ink-900/60 via-ink-900/20 to-transparent" />
+                </div>
+              ))}
+
+              {/* Didascalia e indicatore discreto del cambio foto */}
+              <div className="absolute bottom-4 left-4 right-4 z-20 flex items-center justify-between text-xs text-white">
+                <span className="font-medium bg-ink-900/65 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/20">
+                  {studioPhotos[currentSlide].caption}
+                </span>
+
+                {/* Barretta di progressione visiva discreta */}
+                <div className="flex items-center gap-1.5 bg-ink-900/65 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20">
+                  {studioPhotos.map((_, i) => (
+                    <span
+                      key={i}
+                      className={`h-1.5 rounded-full transition-all duration-500 ${
+                        i === currentSlide ? 'w-5 bg-terracotta-500' : 'w-1.5 bg-white/50'
+                      }`}
+                    />
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
 
