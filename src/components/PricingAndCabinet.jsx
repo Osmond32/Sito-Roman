@@ -27,15 +27,16 @@ const studioPhotos = [
 
 const PricingAndCabinet = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
-  // Scorrimento continuo automatico ogni 3.5 secondi senza necessità di alcun click
   useEffect(() => {
+    if (isPaused) return;
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % studioPhotos.length);
-    }, 3500);
+    }, 4500);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [isPaused]);
 
   return (
     <section id="cabinet" className="py-24 md:py-32 px-6 bg-sand-50">
@@ -68,6 +69,8 @@ const PricingAndCabinet = () => {
                   <img
                     src={photo.src}
                     alt={photo.alt}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover object-center transform scale-100 hover:scale-105 transition-transform duration-1000 ease-out"
                   />
                   {/* Gradiente inferiore decorativo */}
@@ -82,13 +85,19 @@ const PricingAndCabinet = () => {
                 </span>
 
                 {/* Barretta di progressione visiva discreta */}
-                <div className="flex items-center gap-1.5 bg-ink-900/65 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20">
+                <div
+                  className="flex items-center gap-1.5 bg-ink-900/65 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20 cursor-pointer hover:bg-ink-900/80 transition-colors"
+                  onMouseEnter={() => setIsPaused(true)}
+                  onMouseLeave={() => setIsPaused(false)}
+                >
                   {studioPhotos.map((_, i) => (
-                    <span
+                    <button
                       key={i}
+                      onClick={() => setCurrentSlide(i)}
                       className={`h-1.5 rounded-full transition-all duration-500 ${
                         i === currentSlide ? 'w-5 bg-terracotta-500' : 'w-1.5 bg-white/50'
                       }`}
+                      aria-label={`Voir photo ${i + 1}`}
                     />
                   ))}
                 </div>
@@ -177,7 +186,7 @@ const PricingAndCabinet = () => {
                   <span className="font-display font-bold text-terracotta-500 text-2xl sm:text-3xl">
                     60 €
                   </span>
-                  <span className="block text-[11px] text-ink-300">par séance</span>
+                  <span className="block text-[11px] text-ink-500">par séance</span>
                 </div>
               </div>
 
@@ -196,7 +205,7 @@ const PricingAndCabinet = () => {
                   <span className="font-display font-bold text-terracotta-500 text-2xl sm:text-3xl">
                     60 €
                   </span>
-                  <span className="block text-[11px] text-ink-300">par séance</span>
+                  <span className="block text-[11px] text-ink-500">par séance</span>
                 </div>
               </div>
 

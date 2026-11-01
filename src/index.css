@@ -6,8 +6,11 @@
   --color-clay-50: #F3EBE1;
   --color-clay-100: #EDE4DC;
   --color-ink-900: #2B2321;
+  --color-ink-800: #382F2D;
   --color-ink-700: #3D3431;
+  --color-ink-600: #4A403C;
   --color-ink-500: #5C504C;
+  --color-ink-400: #6E625D;
   --color-ink-300: #7A6A64;
   --color-ink-200: #9A8B82;
   --color-ink-100: #B5A8A2;
@@ -17,6 +20,7 @@
   --color-terracotta-500: #E07A5F;
   --color-terracotta-600: #D0694E;
   --color-terracotta-700: #B4533C;
+  --color-terracotta-800: #A04838;
   --color-line: #EEDFD3;
   --color-line-soft: #E5D9CD;
 
@@ -92,6 +96,18 @@
 }
 
 @layer utilities {
+  /* Respect users who reduce motion on their OS */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+    .animate-[spin_60s_linear_infinite] {
+      display: none;
+    }
+  }
+
   .animate-fade-up {
     animation: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
   }

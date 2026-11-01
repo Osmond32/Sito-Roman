@@ -59,9 +59,7 @@ const Approach = () => {
             {pillars.map((p, i) => (
               <div
                 key={p.title}
-                className={`group flex gap-5 p-6 bg-white rounded-2xl border border-line shadow-soft hover:shadow-lift hover:border-terracotta-200 transition-all duration-300 ${
-                  i === 1 ? 'lg:ml-8' : i === 2 ? 'lg:ml-16' : ''
-                }`}
+                className="group flex gap-5 p-6 bg-white rounded-2xl border border-line shadow-soft hover:shadow-lift hover:border-terracotta-200 transition-all duration-300"
               >
                 <div className="w-12 h-12 rounded-xl bg-terracotta-50 group-hover:bg-terracotta-100 flex items-center justify-center text-terracotta-500 shrink-0 transition-colors">
                   <p.icon size={24} />

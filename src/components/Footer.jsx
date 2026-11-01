@@ -17,19 +17,19 @@ const Footer = () => {
               </span>
               <div>
                 <p className="font-display text-xl font-bold text-white">Romane de Fresnoye</p>
-                <p className="text-xs text-ink-200 uppercase tracking-widest">
+                <p className="text-xs text-white/80 uppercase tracking-widest">
                   Sexothérapeute certifiée CERFPA
                 </p>
               </div>
             </div>
 
-            <p className="text-sm text-ink-100 font-light leading-relaxed max-w-sm">
+            <p className="text-sm text-white/90 font-light leading-relaxed max-w-sm">
               Accompagnement bienveillant et confidentiel en cabinet à Lille ou en téléconsultation pour adultes, couples et adolescents.
             </p>
           </div>
 
           {/* Colonna 2: Coordonnées & Accès */}
-          <div className="md:col-span-4 space-y-3 text-sm text-ink-100">
+          <div className="md:col-span-4 space-y-3 text-sm text-white/90">
             <p className="font-display font-semibold text-white text-base mb-2">Cabinet & Contact</p>
 
             <div className="flex items-start gap-2.5">
@@ -44,14 +44,14 @@ const Footer = () => {
 
             <div className="flex items-center gap-2.5 pt-1">
               <Mail size={16} className="text-terracotta-500 shrink-0" />
-              <span className="text-xs text-ink-200">Prise de contact via la messagerie Resalib</span>
+              <span className="text-xs text-white/70">Prise de contact via la messagerie Resalib</span>
             </div>
           </div>
 
           {/* Colonna 3: Accès rapide */}
           <div className="md:col-span-3 space-y-4">
             <p className="font-display font-semibold text-white text-base">Réservation</p>
-            <p className="text-xs text-ink-200 leading-relaxed font-light">
+            <p className="text-xs text-white/80 leading-relaxed font-light">
               Consultez les créneaux disponibles et réservez directement en ligne 24h/24.
             </p>
             <a
@@ -67,7 +67,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar: Copyright & mentions */}
-        <div className="pt-8 border-t border-ink-700/80 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-ink-200">
+        <div className="pt-8 border-t border-ink-700/80 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-white/70">
           <p>© {new Date().getFullYear()} Romane de Fresnoye — Tous droits réservés.</p>
           <div className="flex items-center gap-4">
             <span>Entrepreneur individuel (SIRET déclaré)</span>

@@ -52,7 +52,7 @@ const Specialties = () => {
             >
               <div>
                 <div className="flex items-center justify-between mb-8">
-                  <span className="w-13 h-13 rounded-2xl bg-terracotta-50 group-hover:bg-terracotta-100 text-terracotta-700 flex items-center justify-center font-display text-2xl font-bold transition-colors">
+                  <span className="w-12 h-12 rounded-2xl bg-terracotta-50 group-hover:bg-terracotta-100 text-terracotta-700 flex items-center justify-center font-display text-2xl font-bold transition-colors">
                     {spec.number}
                   </span>
                   <span className="text-xs font-semibold text-terracotta-700 bg-sand-50 px-3 py-1 rounded-full border border-line">
@@ -74,7 +74,7 @@ const Specialties = () => {
                 </p>
               </div>
 
-              <div className="pt-8 mt-6 border-t border-line/60 flex items-center justify-between text-xs font-semibold text-ink-300 group-hover:text-terracotta-700 transition-colors">
+              <div className="pt-8 mt-6 border-t border-line/60 flex items-center justify-between text-xs font-semibold text-ink-500 group-hover:text-terracotta-700 transition-colors">
                 <span>Cabinet ou visio</span>
                 <ArrowUpRight size={16} className="transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </div>

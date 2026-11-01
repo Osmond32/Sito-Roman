@@ -59,10 +59,10 @@ const Hero = () => {
 
         {/* Right Column: Photo + floating badge */}
         <div className="relative animate-fade-up animation-delay-200">
-          {/* Decorative ring behind image */}
-          <div className="absolute -inset-4 rounded-[2rem] border-2 border-dashed border-terracotta-200/50 animate-[spin_60s_linear_infinite] pointer-events-none hidden lg:block" />
+          {/* Warm orange frame hugging the portrait */}
+          <div className="absolute -inset-1 rounded-[1.9rem] border-2 border-terracotta-500 pointer-events-none" />
 
-          <div className="relative aspect-[4/5] rounded-[var(--radius-card)] bg-clay-50 overflow-hidden shadow-lift border-4 border-white">
+          <div className="relative aspect-[4/5] rounded-[var(--radius-card)] bg-clay-50 overflow-hidden shadow-lift shadow-glow border-4 border-white">
             <img
               src={profileImg}
               alt="Romane de Fresnoye – Sexothérapeute à Lille"
