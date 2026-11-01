@@ -12,11 +12,11 @@ const Banner = () => {
           className="w-full h-full object-cover object-center"
         />
 
-        {/* Sfumatura superiore verso bg-sand-50 (#FAF7F2) */}
-        <div className="absolute inset-x-0 top-0 h-24 sm:h-32 md:h-40 bg-gradient-to-b from-sand-50 via-sand-50/70 to-transparent pointer-events-none" />
+        {/* Sfumatura superiore molto sottile e leggera */}
+        <div className="absolute inset-x-0 top-0 h-10 sm:h-14 md:h-16 bg-gradient-to-b from-sand-50/70 via-sand-50/20 to-transparent pointer-events-none" />
 
-        {/* Sfumatura inferiore verso bg-clay-50/70 */}
-        <div className="absolute inset-x-0 bottom-0 h-24 sm:h-32 md:h-40 bg-gradient-to-t from-clay-50 via-clay-50/80 to-transparent pointer-events-none" />
+        {/* Sfumatura inferiore molto sottile e leggera */}
+        <div className="absolute inset-x-0 bottom-0 h-10 sm:h-14 md:h-16 bg-gradient-to-t from-clay-50/70 via-clay-50/20 to-transparent pointer-events-none" />
       </div>
     </section>
   );
