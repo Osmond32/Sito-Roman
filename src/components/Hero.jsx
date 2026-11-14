@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="absolute top-10 right-0 w-[500px] h-[500px] rounded-full bg-terracotta-100/30 blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[300px] h-[300px] rounded-full bg-terracotta-100/20 blur-3xl translate-y-1/2 -translate-x-1/3 pointer-events-none" />
 
-      <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[0.95fr_1.05fr] gap-4 lg:gap-6 items-center">
+      <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[0.9fr_1.1fr] gap-2 lg:gap-4 items-start">
         {/* Left Column */}
         <div className="space-y-7 animate-fade-up">
           <div className="flex flex-wrap gap-2">
@@ -60,7 +60,7 @@ const Hero = () => {
             {/* Subtle warm frame hugging the portrait */}
             <div className="absolute -inset-1 rounded-[1.8rem] border border-terracotta-200 pointer-events-none" />
 
-            <div className="relative aspect-[4/5] rounded-[var(--radius-card)] bg-clay-50 overflow-hidden shadow-lift border-2 border-white">
+            <div className="relative aspect-[3/4] rounded-[var(--radius-card)] bg-clay-50 overflow-hidden shadow-lift border-2 border-white">
               <img
                 src={profileImg}
                 alt="Romane de Fresnoye – Sexothérapeute à Lille"
