@@ -1,5 +1,4 @@
-import React from 'react';
-import { Calendar, Check } from 'lucide-react';
+import { Calendar } from 'lucide-react';
 import profileImg from '../assets/profilo.jpeg';
 
 const RESALIB_URL =
@@ -12,7 +11,7 @@ const Hero = () => {
       <div className="absolute top-10 right-0 w-[500px] h-[500px] rounded-full bg-terracotta-100/30 blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[300px] h-[300px] rounded-full bg-terracotta-100/20 blur-3xl translate-y-1/2 -translate-x-1/3 pointer-events-none" />
 
-      <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[0.95fr_1.05fr] gap-4 lg:gap-6 items-center">
         {/* Left Column */}
         <div className="space-y-7 animate-fade-up">
           <div className="flex flex-wrap gap-2">
@@ -25,17 +24,15 @@ const Hero = () => {
             </span>
           </div>
 
-          <h1 className="font-display text-[2.5rem] sm:text-5xl lg:text-[3.5rem] text-ink-900 leading-[1.08] tracking-tight">
-            Retrouvez l&#8217;harmonie
-            <br className="hidden sm:block" />
-            <span className="text-terracotta-500"> intime</span> et
-            <span className="text-terracotta-500"> relationnelle</span>.
+          <h1 className="font-display text-2xl sm:text-3xl lg:text-[2.6rem] text-ink-900 leading-[1.2] tracking-tight font-medium">
+            La sexualité peut parfois soulever des questions, des doutes ou des
+            difficultés que l&#8217;on ne sait pas toujours comment exprimer.
           </h1>
 
-          <p className="text-lg text-ink-500 font-light leading-relaxed max-w-xl">
-            Sexothérapeute certifiée à Lille, je vous accueille avec bienveillance
-            et sans tabou — en individuel, en couple ou pour adolescents — pour
-            libérer la parole et renouer avec une vie affective épanouie.
+          <p className="text-base sm:text-lg text-ink-500 font-light leading-relaxed max-w-xl">
+            Consulter en sexothérapie, c&#8217;est pouvoir aborder ses difficultés
+            sexuelles dans un cadre chaleureux, confidentiel et respectueux,
+            afin d&#8217;avancer à son rythme.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 pt-2">
@@ -57,36 +54,21 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Right Column: Photo + floating badge */}
-        <div className="relative animate-fade-up animation-delay-200">
-          {/* Warm orange frame hugging the portrait */}
-          <div className="absolute -inset-1 rounded-[1.9rem] border-2 border-terracotta-500 pointer-events-none" />
+        {/* Right Column: photo, sitting close to the text */}
+        <div className="relative animate-fade-up animation-delay-200 flex justify-end">
+          <div className="relative w-full max-w-[460px]">
+            {/* Subtle warm frame hugging the portrait */}
+            <div className="absolute -inset-1 rounded-[1.8rem] border border-terracotta-200 pointer-events-none" />
 
-          <div className="relative aspect-[4/5] rounded-[var(--radius-card)] bg-clay-50 overflow-hidden shadow-lift shadow-glow border-4 border-white">
-            <img
-              src={profileImg}
-              alt="Romane de Fresnoye – Sexothérapeute à Lille"
-              loading="eager"
-              className="w-full h-full object-cover object-center transition-transform duration-700 ease-out hover:scale-[1.03]"
-            />
-            {/* Subtle gradient overlay at bottom */}
-            <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-ink-900/15 to-transparent pointer-events-none" />
-          </div>
-
-          {/* Floating trust badge */}
-          <div className="absolute -bottom-5 -left-3 sm:-left-5 bg-white/95 backdrop-blur-md p-5 rounded-2xl shadow-lift border border-line max-w-[260px] animate-float">
-            <div className="flex items-center gap-3">
-              <div className="w-11 h-11 rounded-full bg-terracotta-100 flex items-center justify-center text-terracotta-500 shrink-0">
-                <Check size={22} strokeWidth={2.5} />
-              </div>
-              <div>
-                <p className="font-display font-bold text-ink-900 text-sm leading-snug">
-                  Confidentialité absolue
-                </p>
-                <p className="text-[11px] text-ink-300 mt-0.5 leading-snug">
-                  Écoute active et absence totale de jugement.
-                </p>
-              </div>
+            <div className="relative aspect-[4/5] rounded-[var(--radius-card)] bg-clay-50 overflow-hidden shadow-lift border-2 border-white">
+              <img
+                src={profileImg}
+                alt="Romane de Fresnoye – Sexothérapeute à Lille"
+                loading="eager"
+                className="w-full h-full object-cover object-center transition-transform duration-700 ease-out hover:scale-[1.03]"
+              />
+              {/* Subtle gradient overlay at bottom */}
+              <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-ink-900/15 to-transparent pointer-events-none" />
             </div>
           </div>
         </div>

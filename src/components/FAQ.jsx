@@ -8,24 +8,24 @@ const faqs = [
       "La première séance est avant tout un espace de rencontre et d'écoute bienveillante. Nous faisons le point sur votre situation, vos questionnements ou vos difficultés actuelles. Il n'y a aucun examen médical ni jugement : vous partagez uniquement ce avec quoi vous êtes à l'aise.",
   },
   {
+    question: "Puis-je consulter seul-e si je suis en couple ?",
+    answer:
+      "Oui, il est possible de consulter individuellement pour aborder des difficultés qui concernent votre sexualité ou votre relation. La présence d’un partenaire n’est pas nécessaire pour commencer.",
+  },
+  {
+    question: "Dois-je savoir précisément ce qui ne va pas avant de consulter ?",
+    answer:
+      "Non, vous pouvez venir avec vos questions, un inconfort ou le sentiment que quelque chose a changé, sans nécessairement savoir l’expliquer.",
+  },
+  {
+    question: "La sexothérapie peut-elle aider en cas de douleurs sexuelles ?",
+    answer:
+      "La sexothérapie peut permettre d’aborder le vécu émotionnel et relationnel associé aux douleurs. Un avis médical est également important pour rechercher leurs causes et envisager une prise en charge adaptée.",
+  },
+  {
     question: "Combien de séances sont généralement nécessaires ?",
     answer:
       "La sexothérapie est une thérapie brève. Le nombre de rendez-vous varie selon vos besoins et votre rythme, généralement de quelques séances à quelques mois avec des consultations espacées de 2 à 4 semaines.",
-  },
-  {
-    question: "La sexothérapie est-elle remboursée par la Sécurité Sociale ?",
-    answer:
-      "Les séances de sexothérapie ne sont pas prises en charge par la Sécurité Sociale. Cependant, de plus en plus de mutuelles remboursent tout ou partie des consultations sous le forfait « médecines douces / thérapies alternatives ». Une facture vous est remise sur simple demande.",
-  },
-  {
-    question: "Peut-on consulter seul(e) pour un problème de couple ?",
-    answer:
-      "Oui, absolument. Même si la démarche de couple est idéale lorsque les deux partenaires souhaitent s'impliquer, venir seul(e) permet d'éclairer sa propre posture, d'apaiser ses blocages et de faire évoluer positivement la dynamique relationnelle.",
-  },
-  {
-    question: "Comment fonctionne la téléconsultation ?",
-    answer:
-      "La téléconsultation se déroule via un lien vidéo sécurisé envoyé avant le rendez-vous. Elle offre la même confidentialité et la même qualité d'écoute qu'une séance au cabinet, idéale si vous ne pouvez pas vous déplacer à Lille.",
   },
 ];
 
@@ -44,10 +44,10 @@ const FAQ = () => {
             <HelpCircle size={14} />
             <span>Questions Fréquentes</span>
           </span>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-ink-900 tracking-tight">
+          <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl text-ink-900 tracking-tight">
             Tout ce qu’il faut savoir
           </h2>
-          <p className="text-base text-ink-500 font-light leading-relaxed max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-ink-500 font-light leading-relaxed max-w-2xl mx-auto">
             Des réponses claires pour aborder votre première consultation en toute sérénité.
           </p>
         </div>
@@ -63,10 +63,10 @@ const FAQ = () => {
                 <button
                   type="button"
                   onClick={() => toggle(index)}
-                  className="w-full p-6 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none"
+                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none"
                   aria-expanded={isOpen}
                 >
-                  <span className="font-display font-bold text-ink-900 text-lg sm:text-xl">
+                  <span className="font-display font-semibold text-ink-900 text-base sm:text-lg">
                     {faq.question}
                   </span>
                   <div

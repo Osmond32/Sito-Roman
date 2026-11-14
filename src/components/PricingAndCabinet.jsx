@@ -42,15 +42,18 @@ const PricingAndCabinet = () => {
     <section id="cabinet" className="py-24 md:py-32 px-6 bg-sand-50">
       <div className="max-w-7xl mx-auto space-y-20">
         {/* Intestazione Sezione */}
-        <div className="text-center max-w-2xl mx-auto space-y-4">
+        <div className="text-center max-w-3xl mx-auto space-y-4">
           <span className="text-xs font-semibold tracking-widest uppercase text-terracotta-700 bg-terracotta-100/60 px-3.5 py-1.5 rounded-full inline-block">
             Le Cabinet & Les Consultations
           </span>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-ink-900 tracking-tight">
-            Un cocon d’écoute au cœur de Lille
+          <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl text-ink-900 tracking-tight">
+            Un cadre respectueux de vos limites
           </h2>
-          <p className="text-base text-ink-500 font-light leading-relaxed">
-            Un espace confidentiel, chaleureux et apaisant conçu pour favoriser l’échange libre et la sérénité.
+          <p className="text-sm sm:text-base text-ink-500 font-light leading-relaxed">
+            Je vous accueille dans un espace de parole où vous pouvez déposer vos questionnements,
+            à votre rythme. Chaque parcours est singulier. L&#8217;accompagnement commence par l&#8217;écoute
+            de vos besoins, et de vos attentes. Vous restez libre de ce que vous souhaitez partager.
+            Les questions abordées dépendent de votre situation et de vos besoins.
           </p>
         </div>
 
@@ -176,7 +179,7 @@ const PricingAndCabinet = () => {
                 <div>
                   <span className="text-xs uppercase font-semibold tracking-wider text-terracotta-700">Individuel</span>
                   <p className="font-display font-bold text-ink-900 text-base sm:text-lg mt-0.5">
-                    Séance Individuelle (Adulte ou Adolescent)
+                    Séance individuelle
                   </p>
                   <p className="text-xs sm:text-sm text-ink-300 mt-0.5">
                     Au cabinet à Lille ou à distance en téléconsultation
@@ -193,9 +196,9 @@ const PricingAndCabinet = () => {
               {/* Card 2 */}
               <div className="p-6 bg-white rounded-2xl border border-line shadow-soft flex justify-between items-center hover:border-terracotta-200 transition-colors">
                 <div>
-                  <span className="text-xs uppercase font-semibold tracking-wider text-terracotta-700">Couple</span>
+                  <span className="text-xs uppercase font-semibold tracking-wider text-terracotta-700">En duo / Couple</span>
                   <p className="font-display font-bold text-ink-900 text-base sm:text-lg mt-0.5">
-                    Séance de Couple
+                    Séance en duo
                   </p>
                   <p className="text-xs sm:text-sm text-ink-300 mt-0.5">
                     Accompagnement de l'intimité et de la dynamique relationnelle
@@ -203,7 +206,7 @@ const PricingAndCabinet = () => {
                 </div>
                 <div className="text-right ml-4 shrink-0">
                   <span className="font-display font-bold text-terracotta-500 text-2xl sm:text-3xl">
-                    60 €
+                    85 €
                   </span>
                   <span className="block text-[11px] text-ink-500">par séance</span>
                 </div>
